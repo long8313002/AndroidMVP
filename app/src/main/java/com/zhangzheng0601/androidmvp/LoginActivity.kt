@@ -31,7 +31,7 @@ internal class LoginActivity : BaseActivity<LoginPresenter.ILoginView, LoginPres
         return LoginView(this, this)
     }
 
-    override fun onCleackClick(view: View) {
+    override fun onClearClick(view: View) {
         presenter.onClearClick()
     }
 

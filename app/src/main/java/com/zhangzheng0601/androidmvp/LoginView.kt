@@ -10,7 +10,7 @@ class LoginView(context: Context, var callback: IEventCallBack) : BaseView(conte
 
     interface IEventCallBack {
 
-        fun onCleackClick(view: View)
+        fun onClearClick(view: View)
 
         fun onLoginClick(view: View)
     }
@@ -20,7 +20,7 @@ class LoginView(context: Context, var callback: IEventCallBack) : BaseView(conte
         LayoutInflater.from(context).inflate(R.layout.activity_main, this)
 
         btClear.setOnClickListener {
-            callback.onCleackClick(it)
+            callback.onClearClick(it)
         }
 
         btLogin.setOnClickListener {
