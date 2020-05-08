@@ -1,9 +1,9 @@
-package com.zhangzheng0601.androidmvp
+package com.zhangzheng0601.androidmvp.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class BaseActivity<V:BasePresenter.IView,M:BasePresenter.IModel,T:BasePresenter<V,M>>: AppCompatActivity() {
+abstract class BaseActivity<V: BasePresenter.IView,M: BasePresenter.IModel,T: BasePresenter<V, M>>: AppCompatActivity() {
 
     protected lateinit var presenter:T
     protected lateinit var view:V
@@ -45,7 +45,7 @@ abstract class BaseActivity<V:BasePresenter.IView,M:BasePresenter.IModel,T:BaseP
 
     override fun onDestroy() {
         super.onDestroy()
-        presenter.onDestory()
+        presenter.onDestroy()
     }
 
 

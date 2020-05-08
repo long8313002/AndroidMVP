@@ -1,9 +1,10 @@
-package com.zhangzheng0601.androidmvp
+package com.zhangzheng0601.androidmvp.base
 
 import android.graphics.Bitmap
 import android.os.Bundle
+import android.view.View
 
-abstract class BasePresenter<V: BasePresenter.IView,M:BasePresenter.IModel>{
+abstract class BasePresenter<V: BasePresenter.IView,M: BasePresenter.IModel>{
 
     interface IView {
 
@@ -12,6 +13,8 @@ abstract class BasePresenter<V: BasePresenter.IView,M:BasePresenter.IModel>{
         fun getString(resId: Int):String?
 
         fun getBitmap(resId:Int):Bitmap?
+
+        fun  getContentView():View
 
     }
 
@@ -25,23 +28,23 @@ abstract class BasePresenter<V: BasePresenter.IView,M:BasePresenter.IModel>{
         this.model = model
     }
 
-    fun onCreate(savedInstanceState: Bundle?) {
+   open fun onCreate(savedInstanceState: Bundle?) {
 
     }
 
-    fun onPause() {
+    open fun onPause() {
 
     }
 
-    fun onResume() {
+    open fun onResume() {
 
     }
 
-    fun onStop() {
+    open fun onStop() {
 
     }
 
-    fun onDestory() {
+    open fun onDestroy() {
 
     }
 

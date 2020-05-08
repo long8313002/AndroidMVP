@@ -1,4 +1,4 @@
-package com.zhangzheng0601.androidmvp
+package com.zhangzheng0601.androidmvp.base
 
 import android.app.Activity
 import android.app.Dialog
@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.zhangzheng0601.androidmvp.base.BasePresenter
 
 abstract class BaseView : FrameLayout, BasePresenter.IView {
 
@@ -32,5 +33,9 @@ abstract class BaseView : FrameLayout, BasePresenter.IView {
 
     override fun getBitmap(resId: Int): Bitmap? {
         return getBitmap(resId)
+    }
+
+    override fun getContentView():View {
+        return this
     }
 }

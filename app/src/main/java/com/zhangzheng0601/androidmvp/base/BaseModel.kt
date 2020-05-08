@@ -1,4 +1,4 @@
 package com.zhangzheng0601.androidmvp.base
 
-class BaseModel {
+abstract class BaseModel:BasePresenter.IModel {
 }
